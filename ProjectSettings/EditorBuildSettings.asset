@@ -33,5 +33,6 @@ EditorBuildSettings:
     path: Packages/com.unzenity.core.binaries/Scenes/Worlds/orctempel.zen.unity
     guid: da94ca4a10a02944caa45fdd93d3bb09
   m_configObjects:
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: c6245875b698c0d439b89a736cb2bb92, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ea302bef6e5dfab4abc884c353c0926d, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: af3964d8a6279b54a9254cbe6379b9d1, type: 2}

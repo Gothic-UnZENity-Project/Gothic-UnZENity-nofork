@@ -263,13 +263,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.8.2",
-      "depth": 0,
+      "version": "1.10.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.management": "4.0.1",
+        "com.unity.xr.management": "4.4.0",
         "com.unity.xr.legacyinputhelpers": "2.1.2",
-        "com.unity.inputsystem": "1.4.4",
+        "com.unity.inputsystem": "1.6.3",
         "com.unity.xr.core-utils": "2.1.1"
       },
       "url": "https://packages.unity.com"
@@ -290,6 +290,26 @@
       "source": "git",
       "dependencies": {},
       "hash": "5d7c367114e737e325ad2d58d33e256c6ea655d1"
+    },
+    "com.valvesoftware.unity.openvr": {
+      "version": "https://github.com/Gothic-UnZENity-Project/steamvr-openvr-sdk.git?path=/OpenVR",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.13",
+        "com.unity.ugui": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.4"
+      },
+      "hash": "a0fb60ed97871127b781a34c08c05afdc2fa3a77"
+    },
+    "com.valvesoftware.unity.steamvr": {
+      "version": "https://github.com/Gothic-UnZENity-Project/steamvr-openvr-sdk.git?path=/SteamVR",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.valvesoftware.unity.openvr": "1.2.2"
+      },
+      "hash": "040fc6b4b9ce0fed715c6bbda7d9b8fe9a59969a"
     },
     "com.vrmada.ultimatexr-unity": {
       "version": "https://github.com/VRMADA/ultimatexr-unity.git",
