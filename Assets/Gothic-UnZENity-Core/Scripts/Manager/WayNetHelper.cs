@@ -57,10 +57,9 @@ namespace GUZ.Core.Manager
         [CanBeNull]
         public static FreePoint FindNearestFreePoint(Vector3 lookupPosition, string fpNamePart)
         {
-            return GameData.FreePoints
-                .Where(pair => pair.Value.Name.ContainsIgnoreCase(fpNamePart) && !pair.Value.IsLocked)
-                .OrderBy(pair => Vector3.Distance(pair.Value.Position, lookupPosition))
-                .Select(pair => pair.Value)
+            return GameData.FreePoints.Values
+                .Where(i => i.Name.ContainsIgnoreCase(fpNamePart) && !i.IsLocked)
+                .OrderBy(i => Vector3.Distance(i.Position, lookupPosition))
                 .FirstOrDefault();
         }
 

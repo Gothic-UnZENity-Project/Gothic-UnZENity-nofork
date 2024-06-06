@@ -22,6 +22,9 @@ namespace GUZ.Core.Npc.Actions.AnimationActions
 
             var npcPos = NpcGo.transform.position;
             fp = WayNetHelper.FindNearestFreePoint(npcPos, destination);
+
+            // We need to lock it immediately. Otherwise other NPCs will walk here too.
+            fp.IsLocked = true;
         }
 
         public override void AnimationEndEventCallback(SerializableEventEndSignal eventData)
