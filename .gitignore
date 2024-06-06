@@ -97,6 +97,10 @@ Assets/XR/Settings/OpenXR Package Settings.asset
 *CullingData.asset
 *CullingData.asset.meta
 
+# We leverage UltimateXR via git-based package. Nevertheless, samples needs to be placed in here to work.
+Assets/UltimateXR/
+Assets/UltimateXR.meta
+
 # Do not commit local development settings
 Assets/StreamingAssets/GameSettings.dev.json
 Assets/StreamingAssets/GameSettings.dev.json.meta
