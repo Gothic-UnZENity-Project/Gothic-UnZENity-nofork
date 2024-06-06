@@ -466,7 +466,7 @@ namespace GUZ.Core.Creator
         /// <summary>
         /// Loads the world for occlusion culling.
         /// </summary>
-        public static async void LoadEditorWorld()
+        public static void LoadEditorWorld()
         {
             throw new Exception(
                 "World scenes and their OC data are now fetched from a package. We need to rework this lookup before using it.");

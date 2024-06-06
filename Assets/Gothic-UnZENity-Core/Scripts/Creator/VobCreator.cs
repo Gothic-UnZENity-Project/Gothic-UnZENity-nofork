@@ -311,7 +311,9 @@ namespace GUZ.Core.Creator
                 vobRoot.Position = Vector3.Zero;
             }
 
+#pragma warning disable CS4014 // For now it's fine if we don't wait for the call as it's only a small fire calculation
             CreateVobs(vobTree.RootObjects, go.FindChildRecursively(vob.Slot) ?? go, true);
+#pragma warning restore CS4014
 
             return go;
         }
