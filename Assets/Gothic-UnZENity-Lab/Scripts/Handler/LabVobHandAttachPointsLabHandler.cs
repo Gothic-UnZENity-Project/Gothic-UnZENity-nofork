@@ -26,6 +26,8 @@ namespace GUZ.Lab.Handler
         public TMP_Dropdown vobCategoryDropdown;
         public TMP_Dropdown vobItemDropdown;
         public GameObject itemSpawnSlot;
+        public bool deletePreviousItem;
+        public Toggle deletePreviousItemToggle;
 
         private string currentItemName;
 
@@ -63,10 +65,15 @@ namespace GUZ.Lab.Handler
         public void LoadVobOnClick()
         {
             // We want to have one element only.
-            if (itemSpawnSlot.transform.childCount != 0)
+            if (itemSpawnSlot.transform.childCount != 0 && deletePreviousItem)
                 Destroy(itemSpawnSlot.transform.GetChild(0).gameObject);
 
             StartCoroutine(LoadVobOnClickDelayed());
+        }
+
+        public void SetDeletePreviousItem()
+        {
+            deletePreviousItem = deletePreviousItemToggle.isOn;
         }
 
         private IEnumerator LoadVobOnClickDelayed()

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3848800049239021948}
   - component: {fileID: 4740512252186575585}
   - component: {fileID: -6808202407213995710}
+  - component: {fileID: -3010314504591084045}
   m_Layer: 0
   m_Name: oCItem
   m_TagString: Untagged
@@ -203,8 +204,39 @@ MonoBehaviour:
   UnSocketed:
     m_PersistentCalls:
       m_Calls: []
+  DistanceGrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  DistanceReleased:
+    m_PersistentCalls:
+      m_Calls: []
   GrabPointsMeta: []
   Grabbers: []
   HandGrabbers: []
   Stabbers: []
   Stabbable: {fileID: 0}
+--- !u!114 &-3010314504591084045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503575194566409312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10345b4efa150014fb756a02715a4231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Poses: []
+  CounterScale: {x: 1, y: 1, z: 1}
+  UseRendererBounds: 1
+  ScaleSize: 0
+  SocketScale: 1
+  ScaleOverride: {fileID: 0}
+  SocketedClip: {fileID: 0}
+  UnsocketedClip: {fileID: 0}
+  LinkedGrabbables: []
+  SocketOrientation: {fileID: 0}
+  Tags:
+    Tags: {fileID: 11400000, guid: 0317c576869812948819d376d967fca3, type: 2}
+    _data: 2
