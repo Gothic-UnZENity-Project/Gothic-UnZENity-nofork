@@ -6,7 +6,6 @@ using GUZ.Core.Manager.Settings;
 using GUZ.Lab.Handler;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace GUZ.Lab
 {
@@ -16,7 +15,7 @@ namespace GUZ.Lab
         public LabNpcDialogHandler npcDialogHandler;
         public LabLockableHandler lockableHandler;
         public LabLadderLabHandler ladderLabHandler;
-        public LabVobHandAttachPointsLabHandler vobHandAttachPointsLabHandler;
+        public LabVobSpawnHandler vobSpawnHandler;
         public LabNpcAnimationHandler labNpcAnimationHandler;
 
         private bool _isBooted;
@@ -38,7 +37,7 @@ namespace GUZ.Lab
             npcDialogHandler.Bootstrap();
             lockableHandler.Bootstrap();
             ladderLabHandler.Bootstrap();
-            vobHandAttachPointsLabHandler.Bootstrap();
+            vobSpawnHandler.Bootstrap();
         }
 
         private void BootLab()

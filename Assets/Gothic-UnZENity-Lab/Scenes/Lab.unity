@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 330949650}
   - component: {fileID: 330949651}
   m_Layer: 0
-  m_Name: VobHandAttachPointsTool
+  m_Name: VobSpawnTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9672,7 +9672,7 @@ MonoBehaviour:
   npcDialogHandler: {fileID: 1791413021}
   lockableHandler: {fileID: 1956714045}
   ladderLabHandler: {fileID: 747305793}
-  vobHandAttachPointsLabHandler: {fileID: 330949651}
+  vobSpawnHandler: {fileID: 330949651}
   labNpcAnimationHandler: {fileID: 501618520}
 --- !u!114 &2101890271
 MonoBehaviour:
