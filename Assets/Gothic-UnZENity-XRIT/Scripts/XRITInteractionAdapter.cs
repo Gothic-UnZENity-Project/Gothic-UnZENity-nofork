@@ -45,15 +45,17 @@ namespace GUZ.XRIT
 
         public void AddClimbingComponent(GameObject go)
         {
+            var climbableGo = go.GetComponentInChildren<MeshCollider>().gameObject;
+
             // We will set some default values for collider and grabbing now.
             // Adding it now is easier than putting it on a prefab and updating it at runtime (as grabbing didn't work this way out-of-the-box).
             // e.g. grabComp's colliders aren't recalculated if we have the XRGrabInteractable set in Prefab.
-            var grabComp = go.AddComponent<XRGrabInteractable>();
-            var rigidbodyComp = go.GetComponent<Rigidbody>();
-            var meshColliderComp = go.GetComponentInChildren<MeshCollider>();
+            var grabComp = climbableGo.AddComponent<XRGrabInteractable>();
+            var rigidbodyComp = climbableGo.GetComponent<Rigidbody>();
+            var meshColliderComp = climbableGo.GetComponentInChildren<MeshCollider>();
 
             meshColliderComp.convex = true; // We need to set it to overcome Physics.ClosestPoint warnings.
-            go.tag = Constants.ClimbableTag;
+            climbableGo.tag = Constants.ClimbableTag;
             rigidbodyComp.isKinematic = true;
             grabComp.throwOnDetach = false; // Throws errors and isn't needed as we don't want to move the kinematic ladder when released.
             grabComp.trackPosition = false;

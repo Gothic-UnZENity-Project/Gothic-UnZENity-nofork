@@ -1,8 +1,5 @@
 #if GUZ_HVR_INSTALLED
 using GUZ.Core.Context;
-using HurricaneVR.Framework.Components;
-using HurricaneVR.Framework.Core;
-using HurricaneVR.Framework.Shared;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,9 +29,7 @@ namespace GUZ.HVR
 
         public void AddClimbingComponent(GameObject go)
         {
-            go.AddComponent<HVRClimbable>();
-            HVRGrabbable grabbable = go.AddComponent<HVRGrabbable>();
-            grabbable.PoseType = PoseType.PhysicPoser;
+            // NOP - Currently handled inside prefab itself.
         }
 
         public void AddItemComponent(GameObject go, bool isLab = false)

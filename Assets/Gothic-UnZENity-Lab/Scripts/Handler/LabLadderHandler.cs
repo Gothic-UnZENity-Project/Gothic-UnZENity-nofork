@@ -18,8 +18,7 @@ namespace GUZ.Lab.Handler
             var vobObj = MeshFactory.CreateVob(ladderName, mdl, Vector3.zero, Quaternion.Euler(0, 270, 0),
                 ladderSlot, rootGo: itemPrefab, useTextureArray: false);
 
-            GameObject climbableObj = vobObj.GetComponentInChildren<MeshCollider>().gameObject;
-            GUZContext.InteractionAdapter.AddClimbingComponent(climbableObj);
+            GUZContext.InteractionAdapter.AddClimbingComponent(vobObj);
         }
     }
 }
