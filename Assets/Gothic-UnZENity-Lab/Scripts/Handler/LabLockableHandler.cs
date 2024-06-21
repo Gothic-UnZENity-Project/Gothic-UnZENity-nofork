@@ -11,11 +11,12 @@ namespace GUZ.Lab.Handler
 
         public void Bootstrap()
         {
+            var prefab = PrefabCache.TryGetObject(PrefabCache.PrefabType.VobContainer);
             var chestName = "CHESTBIG_OCCHESTLARGELOCKED.MDS";
             var mdh = AssetCache.TryGetMdh(chestName);
             var mdm = AssetCache.TryGetMdm(chestName);
 
-            MeshFactory.CreateVob(chestName, mdm, mdh, Vector3.zero, Quaternion.identity, chestsGo, useTextureArray: false);
+            MeshFactory.CreateVob(chestName, mdm, mdh, Vector3.zero, Quaternion.identity, chestsGo, rootGo: prefab, useTextureArray: false);
 
 
             var doorName = "DOOR_WOODEN";
