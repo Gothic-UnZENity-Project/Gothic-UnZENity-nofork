@@ -49,6 +49,8 @@ namespace GUZ.Lab.Handler
                 .ToList();
 
             CategoryDropdownValueChanged();
+
+            CreateItem("ItFo_Plants_mushroom_01");
         }
 
         public void CategoryDropdownValueChanged()
